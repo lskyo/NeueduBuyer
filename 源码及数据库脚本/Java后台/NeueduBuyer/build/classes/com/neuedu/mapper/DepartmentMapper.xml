@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- author:罗星华 -->
+<!-- namespace配置操作接口的名称，注意需要包含package包名 -->
+<mapper namespace="com.neuedu.mapper.DepartmentMapper">
+
+	<!-- 使用select对应数据库的查询操作，id配置的是接口的方法名，resultType配置返回数据的类型 -->
+	<select id="findAll" resultType="Department">
+		select department_id as 'departmentId',department_name as 'departmentName' from department
+	</select>
+	
+	<select id="findByDepartmentName" parameterType="String" resultType="Department">
+		select department_id as 'departmentId',department_name as 'departmentName' from department 
+		where department_name=#{departmentName}
+	</select>
+	
+	
+	<select id="findById" parameterType="int" resultType="Department">
+		select department_id as 'departmentId',department_name as 'departmentName' from department 
+		where department_id=#{departmentId}
+	</select>
+	
+	<!-- 统计查询，查询数据库表的总记录数 -->
+	<select id="findTotal" resultType="int">
+		select count(department_id) from department
+	</select>
+	
+	
+	<!-- mysql的分页使用limit 起始记录#{startIndex}，查询条数#{size} -->
+	<select id="findByPager" parameterType="Pager" resultType="Department">
+		select department_id as 'departmentId' ,department_name as 'departmentName' from department limit #{startIndex},#{size}
+	</select>
+	
+	
+	<!-- 从参数中获取数据需要使用#{属性名称}，EL表达式，找对应的get方法 -->
+	<insert id="add" parameterType="Department">
+		insert into department(department_id,department_name) value(#{departmentId},#{departmentName})
+	</insert>
+	
+	
+	<!-- 修改需要加上where条件，否则修改整表数据 -->
+	<update id="update" parameterType="Department">
+		update department set department_name=#{departmentName} where department_id=#{departmentId}
+	</update>
+	
+	
+	<delete id="deleteById" parameterType="int">
+		delete from department where department_id=#{departmentId}
+	</delete>
+</mapper>

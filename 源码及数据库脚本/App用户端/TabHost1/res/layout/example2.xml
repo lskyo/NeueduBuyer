@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroung2"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:id="@+id/exampleLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+
+            <TextView
+                android:id="@+id/examplepage2_0"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="
+	女护士火车救人不留名： 
+		近日，中南大学湘雅二医院办公室收到了一封署名为“常实”的来信，
+	希望帮助寻找一位列车上救人的年轻女子，随后医院微信公众号推出
+	网络“寻人启事”，希望能帮助这位热心人完成心愿，随着消息扩散，
+	救人者被找到，就是医院胸外科护士胡珍。 "
+                android:textColor="#000000" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+
+            <TextView
+                android:id="@+id/examplepage2_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="
+		据介绍，11月7日，烟台至广州的K1159次列车行至汨罗区间段时，
+	突然列车上广播紧急呼叫医务人员，因为卧铺车厢有一个两岁多的小
+	孩误吸了整颗葵花籽，葵花籽堵在孩子鼻腔深处，导致呼吸困难，
+	小孩家长焦急万分。此时，湘雅二医院胸外科护士胡珍刚从汨罗上车，
+	她听到广播后，赶紧朝患者所在卧铺车厢跑去，经简单检查后，
+	胡珍告知幼儿家长，隐约可以看到孩子鼻腔口不到1厘米的地方有瓜子头，
+	并伴有少量出血，她可以试着解危，但需要列车员提供小镊子等工具。 
+	在征得家长同意后，列车员给该女子提供了小镊子。"
+                android:textColor="#000000" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+
+            <TextView
+                android:id="@+id/examplepage2_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="
+		胡珍一边嘱家长安抚好小孩的情绪，一边将小镊子进行消毒处理，
+	她谨慎地把小镊子伸进孩子的鼻腔，几秒钟后就稳稳地把瓜子取了出来。 
+	给医院写信的常实说：“我是这次事件的旁观者，我觉得这件事情虽小，
+	但精神感人，希望医院能对这种行为予以表彰，媒体能够向社会传播医
+	护人员的正能量。” "
+                android:textColor="#000000" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+
+            <TextView
+                android:id="@+id/examplepage2_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="
+	“作为一名护士，救人像呼吸一样自然，是一种本能。
+	在湘雅二医院，很多同事为我树立了榜样，我做了一个医务人员应该做的事情，
+	下次遇到这样的事情，我还是会做同样的选择。”胡珍说"
+                android:textColor="#000000" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

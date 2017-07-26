@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/backgroung2"
+    android:fadingEdge="none" >
+
+    <LinearLayout
+        android:id="@+id/sure"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/please"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal"
+            android:text="请填写预约信息:"
+            android:textColor="#000000"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/workAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="护工工作地点："
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/workAddressEdit"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/showTime1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/startWorkTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="服务开始日期和时间:"
+                android:textColor="#000000"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+            <!-- 定义一个DatePicker组件 -->
+            <!-- 显示用户输入日期、时间的控件 -->
+
+            <EditText
+                android:id="@+id/show1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:cursorVisible="false"
+                android:editable="false"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/time1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <DatePicker
+                android:id="@+id/datePicker1"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:calendarViewShown="false"
+                android:endYear="2050"
+                android:spinnersShown="true"
+                android:startYear="2000" />
+            <!-- 定义一个TimePicker组件 -->
+
+            <TimePicker
+                android:id="@+id/timePicker1"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/showTime2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/endWorkTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="服务结束日期和时间:"
+                android:textColor="#000000"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+            <!-- 定义一个DatePicker组件 -->
+            <!-- 显示用户输入日期、时间的控件 -->
+
+            <EditText
+                android:id="@+id/show2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:cursorVisible="false"
+                android:editable="false"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/time2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <DatePicker
+                android:id="@+id/datePicker2"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:calendarViewShown="false"
+                android:endYear="2050"
+                android:spinnersShown="true"
+                android:startYear="2000" />
+            <!-- 定义一个TimePicker组件 -->
+
+            <TimePicker
+                android:id="@+id/timePicker2"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/pay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="金额："
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/payEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="#33cc33"
+            android:paddingBottom="3dip"
+            android:paddingLeft="80dip"
+            android:paddingRight="80dip"
+            android:paddingTop="3dip"
+            android:text="立即支付"
+            android:textSize="30dp" />
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">仁爱护工</string>
+
+    <string name="tab_me">首页</string>
+    <string name="tab_cards">预约</string>
+    <string name="tab_search">订单</string>
+    <string name="tab_more">设置</string>
+    
+</resources>

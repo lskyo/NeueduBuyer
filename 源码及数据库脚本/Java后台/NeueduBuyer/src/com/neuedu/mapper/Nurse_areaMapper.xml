@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- @刘志杰 -->
+<!-- namespace配置操作接口的名称，需要包含package包名 -->
+<mapper namespace="com.neuedu.mapper.Nurse_areaMapper">
+
+	<!-- 使用select对应数据库的查询操作，id配置的是接口的方法名,resultType配置返回数据的类型 -->
+	<select id="findAll" resultType="Nurse_area">
+		select pri_id as 'priId', nurse_id as 'nurseId' ,area_id as 'areaId' from nurse_area
+	</select>
+
+
+	<select id="findByAreaId" parameterType="int" resultType="Nurse_area">
+		select pri_id as 'priId', nurse_id as 'nurseId' , area_id as 'areaId' from nurse_area where area_id=#{areaId}
+	</select>
+	
+	<select id="findByPriId" parameterType="int" resultType="Nurse_area">
+		select pri_id as 'priId', nurse_id as 'nurseId' , area_id as 'areaId' from nurse_area where pri_id=#{priId}
+	</select>
+
+
+	<select id="findByNurseId" parameterType="String" resultType="Nurse_area">
+		select pri_id as 'priId', nurse_id as 'nurseId' ,area_id as 'areaId' from nurse_area where nurse_id=#{nurseId}
+	</select>
+
+
+	<!-- 从参数中获取数据需要使用#{属性名}，这是类EL表达式语法 -->
+	<insert id="add" parameterType="Nurse_area">
+		insert into nurse_area(pri_id,nurse_id,area_id) values(#{priId},#{nurseId},#{areaId})
+	</insert>
+
+	<!-- 修改需要加上where条件，否则会修改整表的数据 -->
+	<update id="update" parameterType="Nurse_area">
+		update nurse_area set nurse_id=#{nurseId} ,area_id=#{areaId} where pri_id=#{priId}
+	</update>
+
+	<!-- 删除数据需要加上where条件，否则会删除整表数据 -->
+	<delete id="deleteByNurseId" parameterType="String">
+		delete from nurse_area where nurse_id = #{nurseId}
+	</delete>
+
+	<delete id="deleteByAreaId" parameterType="int">
+		delete from nurse_area where area_id = #{areaId}
+	</delete>
+	
+	<delete id="deleteByPriId" parameterType="int">
+		delete from nurse_area where pri_id = #{priId}
+	</delete>
+
+	<!-- 统计查询，查询数据库表的总记录数 -->
+	<select id="findTotal" resultType="int">
+		select count(area_id) from nurse_area
+	</select>
+
+	<!-- mysql的分页使用limit 起始记录，查询条数 -->
+	<select id="findByPager" parameterType="Pager" resultType="nurse_area">
+		select pri_id as 'priId',nurse_id as 'nurseId' , area_id as 'areaId' from nurse_area limit #{startIndex}, #{size}
+	</select>
+
+</mapper>

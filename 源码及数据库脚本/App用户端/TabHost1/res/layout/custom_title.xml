@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 自定义标题栏布局，定制作了左中右三格布局 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="48dp"
+    android:layout_gravity="center"
+    android:background="#ffffff"
+    android:orientation="horizontal" >
+
+    <ImageView
+        android:id="@+id/loginphoto"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dip"
+        android:layout_marginTop="5dip"
+        android:layout_weight="0.2"
+        android:src="@drawable/btn_user" />
+
+    <EditText
+        android:id="@+id/edit"
+        android:layout_width="220dip"
+        android:layout_height="50dip"
+        android:layout_marginLeft="20dp"
+        android:gravity="center_vertical"
+        android:textColor="#000000"
+        android:hint="搜索" 
+        android:layout_weight="0.6"
+        
+        />
+
+    <ImageView
+        android:id="@+id/btn1"
+        android:layout_width="30dip"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:gravity="center_vertical"
+        android:src="@drawable/search" 
+        android:layout_weight="0.2"/>
+    <!--
+      <TextView
+            android:id="@+id/appTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textColor="#FFFFFF"
+            android:textSize="25sp" />
+    -->
+
+</LinearLayout>

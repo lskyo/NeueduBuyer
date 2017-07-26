@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout  
+    xmlns:android="http://schemas.android.com/apk/res/android"  
+    android:layout_height="wrap_content"  
+    android:paddingBottom="4dip" 
+    android:layout_width="fill_parent"  
+    android:gravity="center_horizontal">  
+    <LinearLayout  
+        android:id="@+id/shoukuan"  
+        android:layout_width="70dp"  
+        android:layout_height="wrap_content"  
+        android:layout_weight="1"  
+        android:gravity="center"  
+        android:orientation="vertical">  
+  
+        <View  
+            android:layout_width="match_parent"  
+            android:layout_height="10dp" />  
+  
+  
+        <ImageView  
+            android:id="@+id/images_show"  
+            android:layout_width="30dp"  
+            android:layout_height="30dp"  
+            android:layout_weight="1"  
+            android:src="@drawable/ic_launcher"/>  
+  
+        <View  
+            android:layout_width="match_parent"  
+            android:layout_height="10dp" />  
+  
+        <TextView  
+            android:id="@+id/name_show"  
+            android:layout_width="wrap_content"  
+            android:layout_height="wrap_content"  
+            android:layout_weight="1"  
+            android:text="王老师"  
+            android:textColor="#000000"  
+            android:textSize="13dp"  
+            android:gravity="center"/>  
+    </LinearLayout>  
+</RelativeLayout>   

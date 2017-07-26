@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@drawable/backgroung2">
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+        
+        <ImageView 
+            
+            android:id="@+id/goback"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            android:adjustViewBounds="true"
+            android:maxHeight="50dp"
+            android:maxWidth="50dp"
+            android:layout_weight="0.2"
+            android:src="@drawable/back" />
+        <TextView
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            android:text="护工个人信息"
+            android:textSize="25sp"
+            android:gravity="center"
+            android:textColor="#000000"/>
+    </LinearLayout>
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal">
+	<TextView 
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:layout_weight="1"/>
+        <ImageView
+            android:id="@+id/photo"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_launcher"
+            android:layout_weight="1" />
+	<TextView 
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:layout_weight="1"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" 
+        >
+        <LinearLayout 
+        	android:layout_width="match_parent"
+        	android:layout_height="wrap_content"
+        	android:orientation="vertical" >
+            <TextView 
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="基本信息"
+                android:textSize="25sp"
+                android:textColor="#000000"/>
+        </LinearLayout>
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+              <TextView
+                  android:id="@+id/nameTest"
+                  android:layout_width="wrap_content"
+                  android:layout_height="match_parent"
+                  android:text="姓名："
+                  android:textColor="#000000"
+                  android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="68dp"
+                android:layout_height="match_parent"
+                android:text="晓玲"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+        	<TextView
+        	    android:id="@+id/sexText"
+        	    android:layout_width="73dp"
+        	    android:layout_height="match_parent"
+        	    android:text="性别："
+        	    android:textColor="#000000"
+        	    android:textSize="20sp" />
+
+        	<TextView
+        	    android:id="@+id/sex"
+        	    android:layout_width="50dp"
+        	    android:layout_height="match_parent"
+        	    android:text="女"
+        	    android:textColor="#000000"
+        	    android:textSize="20sp" />
+
+        	</LinearLayout>
+        	<LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/ageText"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="年龄："
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/age"
+                android:layout_width="59dp"
+                android:layout_height="match_parent"
+                android:text="18"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+          <TextView
+              android:id="@+id/experience"
+              android:layout_width="32dp"
+              android:layout_height="match_parent"
+              android:text="0"
+              android:textColor="#000000"
+              android:textSize="20sp" />
+
+          <TextView 
+        	    android:id="@+id/experienceText"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:text="年工作经验"
+                android:textSize="20sp"
+                android:textColor="#000000"
+                />
+        </LinearLayout>
+        <LinearLayout 
+             android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal">
+              <TextView 
+                  android:id="@+id/character"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="性格特点："
+                android:textSize="20sp"
+                android:textColor="#000000"
+                />
+        </LinearLayout>
+        <LinearLayout 
+             android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal">
+
+              <TextView
+                  android:id="@+id/useAssess"
+                  android:layout_width="match_parent"
+                  android:layout_height="40dp"
+                  android:text="用户评价"
+                  android:textColor="#000000"
+                  android:textSize="20sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

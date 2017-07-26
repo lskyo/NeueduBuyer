@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<typeAliases>
+	   <!-- 在mapper文件中，可以使用类的别名进行编写，这样可以减少配置代码
+		<typeAlias alias="Area" type="com.neuedu.model.Area" />
+		<typeAlias alias="Demo" type="com.neuedu.model.Demo" />
+		<typeAlias alias="UserAccount" type="com.neuedu.model.UserAccount" />
+		-->
+		
+		<!-- 当所有的model类都在统一一个package下，且别名与类名相同，可以配置一个package减少配置，代码可读性更好  -->
+		<package name="com.neuedu.model"/>
+		
+	</typeAliases>
+
+	<mappers>
+		<!-- 把数据库配置交给mybatis代理 -->
+		<mapper resource="com/neuedu/mapper/DepartmentMapper.xml"/>
+		<mapper resource="com/neuedu/mapper/UserMapper.xml"/>
+		<mapper resource="com/neuedu/mapper/EmployeeMapper.xml"/>
+		<mapper resource="com/neuedu/mapper/AreaMapper.xml"/>
+		<mapper resource="com/neuedu/mapper/AssessMapper.xml"/>
+		<mapper resource="com/neuedu/mapper/Nurse_areaMapper.xml"/>
+		<mapper resource="com/neuedu/mapper/NurseMapper.xml"/>
+		<mapper resource="com/neuedu/mapper/ReservationMapper.xml"/>
+	</mappers>
+
+</configuration>  

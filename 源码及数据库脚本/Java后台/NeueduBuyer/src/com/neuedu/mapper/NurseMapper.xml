@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- @auther 青计 -->
+
+<!-- namespace配置操作接口的名称，注意需要包含package包名 -->
+<mapper namespace="com.neuedu.mapper.NurseMapper">
+	<!-- 使用select对应数据库的查询操作，id配置的是界都的方法名，resultType配置返回数据的类型 -->
+	<select id="findAll" resultType="Nurse">
+		select nurse_id as 'nurseId',nurse_name as 
+		'nurseName',sex,birthday,age,major,create_time as 
+		'createTime',introduce,isfree,wage,address,nurse_picture as 
+		'nursePicture',nurse_idcard as 'nurseIdcard',nurse_level as 
+		'nurseLevel' from nurse
+	</select>
+
+
+	<!-- 从参数中获取数据需要使用#{属性名}，这是类EL表达式语法 -->
+	<insert id="add" parameterType="Nurse">
+		insert into  
+		nurse(nurse_id,nurse_name,sex,birthday,age,major,create_time,introduce,isfree,wage,address,nurse_picture,nurse_idcard,nurse_level)  
+		values(#{nurseId},#{nurseName},#{sex},#{birthday},#{age},#{major},#{createTime},#{introduce},#{isfree},#{wage},#{address},#{nursePicture},#{nurseIdcard},#{nurseLevel})  
+	</insert>
+
+
+	<!--修改需要加上where条件，否则会修改整表的数据 -->
+	<update id="update" parameterType="Nurse">
+		update nurse
+		<trim prefix="set" suffixOverrides=",">
+		 <if test="nurseName != null">nurse_name=#{nurseName},</if>
+		 <if test="sex != null">sex=#{sex},</if>
+		 <if test="birthday != null">birthday=#{birthday},</if>
+		 <if test="age != null">age=#{age},</if>
+		 <if test="major != null">major=#{major},</if>
+		 <if test="createTime != null">create_time=#{createTime},</if>
+		 <if test="introduce != null">introduce=#{introduce},</if>
+		 <if test="isfree != null">isfree=#{isfree},</if>
+		 <if test="wage != null">wage=#{wage},</if>
+		 <if test="address != null">address=#{address},</if>
+		 <if test="nursePicture != null">nurse_picture=#{nursePicture},</if>
+		 <if test="nurseIdcard != null">nurse_idcard=#{nurseIdcard},</if>
+		 <if test="nurseLevel != null">nurse_level=#{nurseLevel},</if>
+		 </trim>
+		where nurse_id=#{nurseId} 
+	</update>
+
+	<!--按条件删除 -->
+	<delete id="deleteByNurseId" parameterType="String">
+		delete from nurse where nurse_id=#{nurseIdcard}
+	</delete>
+
+	<!--查询配置可以同时有参数和返回结果 -->
+	<select id="findByNurseId" parameterType="String" resultType="Nurse">
+		select nurse_id as 'nurseId',nurse_name as 
+		'nurseName',sex,birthday,age,major,create_time as 
+		'createTime',introduce,isfree,wage,address,nurse_picture as 
+		'nursePicture',nurse_idcard as 'nurseIdcard',nurse_level as 
+		'nurseLevel' from nurse where nurse_id= #{nurseId}
+	</select>
+	<select id="findByNurseName" parameterType="String" resultType="Nurse">
+		select nurse_id as 'nurseId',nurse_name as 
+		'nurseName',sex,birthday,age,major,create_time as 
+		'createTime',introduce,isfree,wage,address,nurse_picture as 
+		'nursePicture',nurse_idcard as 'nurseIdcard',nurse_level as 
+		'nurseLevel' from nurse where nurse_name= #{nurseName}
+	</select>
+	<select id="findBySex" parameterType="int" resultType="Nurse">
+		select nurse_id as 'nurseId',nurse_name as 
+		'nurseName',sex,birthday,age,major,create_time as 
+		'createTime',introduce,isfree,wage,address,nurse_picture as 
+		'nursePicture',nurse_idcard as 'nurseIdcard',nurse_level as 
+		'nurseLevel' from nurse where sex= #{sex}
+	</select>
+	<select id="findByNurage" parameterType="String" resultType="Nurse">
+		select nurse_id as 'nurseId',nurse_name as 
+		'nurseName',sex,birthday,age,major,create_time as 
+		'createTime',introduce,isfree,wage,address,nurse_picture as 
+		'nursePicture',nurse_idcard as 'nurseIdcard',nurse_level as 
+		'nurseLevel' from nurse where age= #{age}
+	</select>
+	<select id="findByMajor" parameterType="String" resultType="Nurse">
+		select nurse_id as 'nurseId',nurse_name as 
+		'nurseName',sex,birthday,age,major,create_time as 
+		'createTime',introduce,isfree,wage,address,nurse_picture as 
+		'nursePicture',nurse_idcard as 'nurseIdcard',nurse_level as 
+		'nurseLevel' from nurse where major= #{major}
+	</select>
+	<select id="findByIsfree" parameterType="int" resultType="Nurse">
+		select nurse_id as 'nurseId',nurse_name as 
+		'nurseName',sex,birthday,age,major,create_time as 
+		'createTime',introduce,isfree,wage,address,nurse_picture as 
+		'nursePicture',nurse_idcard as 'nurseIdcard',nurse_level as 
+		'nurseLevel' from nurse where isfree= #{isfree}
+	</select>
+	<select id="findByWage" parameterType="int" resultType="Nurse">
+		select nurse_id as 'nurseId',nurse_name as 
+		'nurseName',sex,birthday,age,major,create_time as 
+		'createTime',introduce,isfree,wage,address,nurse_picture as 
+		'nursePicture',nurse_idcard as 'nurseIdcard',nurse_level as 
+		'nurseLevel' from nurse where wage= #{wage}
+	</select>
+	<select id="findByNurseIdcard" parameterType="String"
+		resultType="Nurse">
+		select nurse_id as 'nurseId',nurse_name as 
+		'nurseName',sex,birthday,age,major,create_time as 
+		'createTime',introduce,isfree,wage,address,nurse_picture as 
+		'nursePicture',nurse_idcard as 'nurseIdcard',nurse_level as 
+		'nurseLevel' from nurse where nurse_idcard= #{nurseIdcard}
+	</select>
+	<select id="findByNurseLevel" parameterType="int" resultType="Nurse">
+		select nurse_id as 'nurseId',nurse_name as 
+		'nurseName',sex,birthday,age,major,create_time as 
+		'createTime',introduce,isfree,wage,address,nurse_picture as 
+		'nursePicture',nurse_idcard as 'nurseIdcard',nurse_level as 
+		'nurseLevel' from nurse where nurse_level= #{nurseLevel}
+	</select>
+	<select id="findByAge" parameterType="int" resultType="Nurse">
+		select nurse_id as 'nurseId',nurse_name as 
+		'nurseName',sex,birthday,age,major,create_time as 
+		'createTime',introduce,isfree,wage,address,nurse_picture as 
+		'nursePicture',nurse_idcard as 'nurseIdcard',nurse_level as 
+		'nurseLevel' from nurse where age= #{age}
+	</select>
+
+
+	<!-- 统计查询，查询数据库表的总记录数 -->
+	<select id="findTotal" resultType="int">
+		select count(reservation_id) from reservation
+	</select>
+
+
+	<select id="findByPager" parameterType="Pager" resultType="Nurse">
+		select nurse_id as 'nurseId',nurse_name as 
+		'nurseName',sex,birthday,age,major,create_time as 
+		'createTime',introduce,isfree,wage,address,nurse_picture as 
+		'nursePicture',nurse_idcard as 'nurseIdcard',nurse_level as 
+		'nurseLevel' from nurse limit #{startIndex},#{size}
+		<!-- limit 从哪条开始查询 查询多少条 -->
+	</select>
+
+	<select id="findByMap" parameterType="Nurse" resultType="Nurse">
+		select nurse_id as 'nurseId', nurse_name as 
+		'nurseName', sex, birthday, age, major, create_time as 
+		'createTime', introduce, isfree ,wage, address, nurse_picture as 
+		'nursePicture', nurse_idcard as 'nurseIdcard', nurse_level as 
+		'nurseLevel' from nurse 
+		where 1=1 
+		<if test="sex != null">
+			and sex=#{sex}
+		</if>
+		<if test="isfree != null">
+			and isfree=#{isfree}
+		</if>
+		<if test="nurseLevel != null">
+			and nurse_level=#{nurseLevel}
+		</if>
+		<if test="age != null">
+			and age=#{age}
+		</if>
+		<if test="wage != null">
+			and wage=#{wage}
+		</if>
+		<if test="nurseId != null">
+			and nurse_id=#{nurseId}
+		</if>
+		<if test="nurseName != null">
+			and a.nurse_name=#{nurseName}
+		</if>
+		<if test="major != null">
+			and major=#{major}
+		</if>
+		<if test="birthday != null">
+			and birthday=#{birthday}
+		</if>
+		<if test="createTime != null">
+			and create_time=#{createTime}
+		</if>
+		<if test="address != null">
+			and address=#{address}
+		</if>
+		<if test="nursePicture != null">
+			and nurse_picture=#{nursePicture}
+		</if>
+		<if test="nurseIdcard != null">
+			and nurse_idcard=#{nurseIdcard}
+		</if>
+	</select>
+	
+	<select id="findByNurseIds" parameterType="List" resultType="Nurse">
+		select nurse_id as 'nurseId',nurse_name as 
+		'nurseName',sex,birthday,age,major,create_time as 
+		'createTime',introduce,isfree,wage,address,nurse_picture as 
+		'nursePicture',nurse_idcard as 'nurseIdcard',nurse_level as 
+		'nurseLevel' from nurse where nurse_id in 
+		<foreach collection="list" index="index" item="item" open="(" separator="," close=")">
+			#{item}
+       </foreach>
+	</select>
+
+
+</mapper>

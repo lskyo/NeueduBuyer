@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroung2"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:id="@+id/exampleLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+
+            <TextView
+                android:id="@+id/examplepage0"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="
+	南丁格尔曾说过：“护理工作是平凡的工作，
+	然而护理人员却用真诚的爱去抚平病人心灵的创伤；
+	用火一样的热情去点燃患者战胜疾病的勇气。”
+	护理工作无疑是一份高尚却又辛苦繁忙的工作。
+	呵护健康、挽救生命是一项高尚而无私的工作，但在这无私的背后，
+	是成千上万个平凡的护理工作者挥洒自己的汗水，
+	奉献自己的青春年华乃至一生所换来的。 
+	在每一个平凡的日子里，有多少护士在病房中来回穿梭，
+	为病人穿刺输液、更换床单、翻身叩背，用娴熟的专业技术护理病人，
+	用真心、爱心、同情心呵护每一位患者，为他们减轻病痛，
+	使他们恢复健康。每当那些受病痛折磨的生命需要关怀时，
+	护士总是第一时间出现，用双手驱赶病魔，挽救生命。
+	 从病人康复的笑脸上，相信每一位护士都会深深感受到这份工作的伟大与无私。 "
+                android:textColor="#000000" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+
+            <TextView
+                android:id="@+id/examplepage1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="
+	从穿上护士服，戴上燕尾帽，宣读南丁格尔誓言的那一刻起，
+	她们不再是骄纵任性的少女，而是背负着挽救生命的护理工作者。
+	护士的工作是辛苦而琐碎的，打针、发药、输液、换药……
+	不仅承受着生理上的负荷，同时也要忍受有些患者和家属无端的指责与误解。
+	但是她们却用自己的专业精神、微笑以及耐心化解着一个个的矛盾。 "
+                android:textColor="#000000" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+
+            <TextView
+                android:id="@+id/examplepage2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="
+	“爱在左，同情在右，走在生命的两旁，随时撒种，随时开花，
+	将这一径长途，点缀得花香弥漫，使穿枝拂叶的行人，踏着荆棘，
+	不觉得痛苦，有泪可落，却不是悲凉。”
+	冰心的这首诗不就是对护士这份职业最好的赞美吗？
+	燕帽顶在头上，誓言记在心底，辛酸藏在心里，微笑挂在脸上。
+	让我们为每一位在医院前线工作的护理人员点赞"
+                android:textColor="#000000" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

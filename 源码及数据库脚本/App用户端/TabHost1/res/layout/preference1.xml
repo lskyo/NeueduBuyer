@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="#ffffff">
+    
+	<LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginTop="100dp"
+   >
+ 
+        <ImageView 
+            android:id="@+id/preImage1"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:src="@drawable/pre1" /> 
+              <View 
+            	android:layout_width="match_parent"
+            	android:layout_height="50dp"/>
+             <TextView 
+            android:id="@+id/preText1"
+            android:layout_width="match_parent"
+            android:layout_height="30dp" 
+            android:text="使用说明："
+            android:textColor="#000000"  
+            android:textSize="25sp"/>
+          
+             <TextView 
+            android:id="@+id/preText2"
+            android:layout_width="match_parent"
+            android:layout_height="30dp" 
+            android:text="1、本优惠券仅限使用。"
+            android:textColor="#000000"
+            android:textSize="25sp"/>
+             <TextView 
+            android:id="@+id/preText3"
+            android:layout_width="match_parent"
+            android:layout_height="30dp" 
+            android:text="2、一次下单只能使用一张优惠券。"
+            android:textColor="#000000"
+            android:textSize="25sp"/>
+             <TextView 
+            android:id="@+id/preText4"
+            android:layout_width="match_parent"
+            android:layout_height="30dp" 
+            android:text="3、使用本优惠券不再享受其他优惠。"
+            android:textColor="#000000"
+            android:textSize="25sp"/>
+             <TextView 
+            android:id="@+id/preText5"
+            android:layout_width="match_parent"
+            android:layout_height="30dp" 
+            android:text="4、本优惠券最终解释权归本公司所有。"
+            android:textColor="#000000"
+            android:textSize="25sp"/>
+             
+             </LinearLayout>
+</LinearLayout>

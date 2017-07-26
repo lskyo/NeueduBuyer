@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@drawable/backgroung2">
+	<TextView 
+	    android:id="@+id/ordertest"
+	    android:layout_width="match_parent"
+	    android:layout_height="45dp"
+	    android:text="订单查询"
+	    android:textColor="#000000"
+	    android:textSize="30sp"
+	    android:gravity="center"
+	    ></TextView>
+	  <View 
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        
+        /> 
+   <TextView 
+	    android:id="@+id/orderReservition"
+	    android:layout_width="match_parent"
+	    android:layout_height="45dp"
+	    android:text="预约订单"
+	    android:textColor="#000000"
+	    android:textSize="30sp"
+	    android:background="#ffffff"
+	    ></TextView>
+  
+	 <View 
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        
+        />
+	<TextView 
+	    android:id="@+id/orderFinish"
+	    android:layout_width="match_parent"
+	    android:layout_height="45dp"
+	    android:text="已完成订单"
+	    android:enabled="true"
+	    android:clickable="true"
+	    android:textColor="#000000"
+	    android:textSize="30sp"
+	    android:background="#ffffff"
+	    ></TextView>
+	 <View 
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+         
+        />
+	<TextView 
+	    android:id="@+id/orderNofinish"
+	    android:layout_width="match_parent"
+	    android:layout_height="45dp"
+	    android:text="未完成订单"
+	    android:textColor="#000000"
+	    android:textSize="30sp"
+	   android:background="#ffffff"
+	    ></TextView>
+	  <View 
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+         
+        />
+	<TextView 
+	    android:id="@+id/orderHistory"
+	    android:layout_width="match_parent"
+	    android:layout_height="45dp"
+	    android:text="历史订单"
+	    android:textColor="#000000"
+	    android:textSize="30sp"
+	     android:background="#ffffff"
+	    ></TextView>
+	<View 
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        
+        />
+</LinearLayout>

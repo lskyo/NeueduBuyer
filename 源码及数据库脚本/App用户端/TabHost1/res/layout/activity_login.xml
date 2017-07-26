@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 插入整个布局的背景图片 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/backgroung2"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/goback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:adjustViewBounds="true"
+        android:maxHeight="30dp"
+        android:maxWidth="30dp"
+        android:src="@drawable/tb_icon_actionbar_back" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:orientation="horizontal" >
+
+        <!-- 表格布局，包括账号和密码 -->
+
+        <TableLayout
+            android:id="@+id/loginInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:stretchColumns="1" >
+
+            <!-- 表格的第一行，账号文本和输入框，黑色粗体字，重心靠右，四周扩充5个像素 -->
+
+            <TableRow>
+
+                <!-- "账号"文本 -->
+
+                <TextView
+                    android:id="@+id/username"
+                    android:padding="5dip"
+                    android:text="账号:"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+                <!-- "账号"输入框，文本超出TextView的宽度的情况下，出现横拉条 -->
+
+                <EditText
+                    android:id="@+id/usernameEdit"
+                    android:scrollHorizontally="true" />
+            </TableRow>
+            <!-- 表格的第二行，密码和密码输入框，黑色粗体字，重心靠右，扩充5个像素 -->
+
+            <TableRow>
+
+                <!-- "密码"文本 -->
+
+                <TextView
+                    android:id="@+id/password"
+                    android:padding="5dip"
+                    android:text="密码:"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+                <!-- "密码"输入框；文本超出TextView的宽度的情况下，出现横拉条 -->
+
+                <EditText
+                    android:id="@+id/passwordEdit"
+                    android:password="true"
+                    android:scrollHorizontally="true" />
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+    <!-- 相对布局，"记住密码"按钮和"自动登录"按钮 -->
+
+    <RelativeLayout
+        android:id="@+id/rememberPassword"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <!-- "记住密码"多选框，黑体字，左缩进5个像素，选中状态 -->
+
+        <CheckBox
+            android:id="@+id/rembPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dip"
+            android:checked="true"
+            android:text="记住密码"
+            android:textColor="#000000" />
+        <!-- "自动登录"多选框，黑体字，右缩进5个像素，与"记住密码"按钮的顶部和右边对齐 -->
+
+        <CheckBox
+            android:id="@+id/autoLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="5dip"
+            android:text="自动登录"
+            android:textColor="#000000" />
+    </RelativeLayout>
+    <!-- "登录"按钮，重心垂直居中，距顶部和底部3个像素，左右扩充80个像素 -->
+
+    <Button
+        android:id="@+id/login_bt"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="3dip"
+        android:paddingLeft="80dip"
+        android:paddingRight="80dip"
+        android:paddingTop="3dip"
+        android:text="登  录 " />
+    <!-- 绝对布局，"隐身登录"按钮和"开机振动"按钮以下部分，距顶部3个像素 -->
+
+    <RelativeLayout
+        android:id="@+id/loginSet"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <!-- "记住密码"多选框，黑体字，左缩进5个像素，选中状态 -->
+
+        <TextView
+            android:id="@+id/forget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dip"
+            android:text="忘记密码？"
+            android:textColor="#000000" />
+        <!-- "自动登录"多选框，黑体字，右缩进5个像素，与"记住密码"按钮的顶部和右边对齐 -->
+
+        <TextView
+            android:id="@+id/registerNew"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="5dip"
+            android:text="新用户注册"
+            android:textColor="#000000" />
+    </RelativeLayout>
+
+</LinearLayout>

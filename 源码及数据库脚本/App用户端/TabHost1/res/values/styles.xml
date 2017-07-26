@@ -1,0 +1,72 @@
+<resources>
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" >
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!--  
+        <item name="android:windowFullscreen">true</item>-->
+       <item name="android:windowNoTitle">true</item>
+    </style>
+<style name="text_black_18">
+        <item name="android:textSize">18dp</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="text_black_20">
+        <item name="android:textSize">20dp</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="text_14">
+        <item name="android:textSize">14dp</item>
+    </style>
+
+    <style name="text_16">
+        <item name="android:textSize">16dp</item>
+    </style>
+
+    <style name="text_18">
+        <item name="android:textSize">18dp</item>
+    </style>
+
+    <style name="text_white_bold_22">
+        <item name="android:textSize">22dp</item>
+        <item name="android:textColor">@color/light_white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text">
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="Theme.White.NoTitleBar" parent="android:Theme.Black.NoTitleBar">
+        <item name="android:windowBackground">@color/white</item>
+    </style>
+
+    <style name="Text.Title" parent="@style/Text">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
+    <style name="Text.Title_Button" parent="@style/Text">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">18dp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:gravity">center</item>
+    </style>
+</resources>

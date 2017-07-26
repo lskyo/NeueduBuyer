@@ -1,0 +1,119 @@
+
+  
+   springMVC +spring core +mybatis
+   
+  ssm快速开发框架使用步骤：
+     1.编写一个实体类，与数据库一一对应,使用工具生成GET和SET方法
+         com.neuedu.model.Area
+         public class Area {
+			private int areaId;
+			private String areaName;
+			private int relative;
+			
+			public int getAreaId() {
+				return areaId;
+			}
+			public void setAreaId(int areaId) {
+				this.areaId = areaId;
+			}
+			
+			//------get,set方法
+		}
+	
+     2.编写数据访问接口，用于定义数据操作方法
+     
+     
+     
+        com.neuedu.mapper.AreaMappger.java
+        
+        package com.neuedu.mapper;
+
+		import java.util.List;
+		
+		import com.neuedu.model.Area;
+		
+		public interface AreaMappger {
+			void save(Area area);
+			boolean  update(Area area);
+			boolean delete(int id);
+			Area findById(int id);
+			List<Area> findAll();	
+		}
+        
+       
+     3. 使用mybatis框架进行数据库操作
+       3.1 配置别名：修改mybatis-config.xml
+         <!-- 实体类,简称 -设置别名 -->
+		<typeAliases>
+			<typeAlias alias="User" type="com.neuedu.model.User" />
+			<typeAlias alias="Area" type="com.neuedu.model.Area" />
+		</typeAliases>
+  
+      3.2 新建mybatis配置文件：AreaMapper.xml
+      
+         <?xml version="1.0" encoding="UTF-8"?>
+		<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+		<!-- 
+			namespace：必须与对应的接口全类名一致
+			id:必须与对应接口的某个对应的方法名一致
+		 -->
+		<mapper namespace="com.neuedu.mapper.AreaMapper">
+		</mapper>
+        
+     3.3 修改AreaMapper.xml文件，调用mybatis实训数据库操作
+      <mapper namespace="com.neuedu.mapper.AreaMapper">
+			<insert id="save" parameterType="Area">
+				insert into area(areaid,areaname,relative) values(#{areaId},#{areaName},#{relative})
+			</insert>
+		</mapper>
+
+    3.4 修改mybatis-config.xml，把对Area表的数据库操作配置到mybatis中，这样mybatis就可以实现数据操作了
+      <mappers>
+			<mapper resource="com/neuedu/mapper/AreaMapper.xml" />
+			<mapper resource="com/neuedu/mapper/oracleUserMapper.xml" />
+			<mapper resource="com/neuedu/mapper/DemoMapper.xml" />
+	 </mappers>
+    
+   4.编写java测试代码，操作数据库
+             参考：AreaTest.java,UserTest.java
+    
+   5.能够成功操作数据库，即是完成了spring+mybais的整合         
+             
+   6.spring+mybatis  ---- dao数据访问层
+	   --------------------------------------------
+	   spring  core  业务层  ---服务层主要掉mapper接口实现数据操作，数据库事务管理
+	   
+	   
+	   6.1.在com.neuedu.service定义一个服务接口
+	        AreaService.java
+	   
+	   6.2.在com.neuedu.service.impl编写一个服务实现类
+	   
+	       AreaServiceImpl.java
+	   
+	   ---------------------------------------------
+    7.spring mvc+spring  ---表示层
+      7.1 controllor控制器开发
+      7.2 spring mvc配置
+      7.3 显示页面开发
+      
+    8.测试--在浏览器中进行测试
+      
+      
+   
+   
+   
+   
+   
+   
+   
+   
+             
+             
+     
+     
+     
+     
+     
+     

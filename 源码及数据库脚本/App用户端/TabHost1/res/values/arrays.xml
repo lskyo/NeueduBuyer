@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer-array name="loadpics">
+        <item>@drawable/ic_load_1</item>
+        <item>@drawable/ic_load_2</item>
+        <item>@drawable/ic_load_3</item>
+        <item>@drawable/ic_load_4</item>
+    </integer-array>
+    
+</resources>

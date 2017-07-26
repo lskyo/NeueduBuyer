@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.i8080soft.tabhost"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="19" />
+<uses-permission android:name="android.permission.INTERNET"/>
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+
+        <!--  -->
+        <activity android:name=".FirstFragment" />
+        <activity android:name=".CardsFrament" />
+        <activity android:name=".SearchOrderFragment" />
+        <activity android:name="com.i8080soft.tabhost.demo2.TabMainActivity" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".ChooseActivity" />
+        <activity android:name=".myAccountset" />
+        <activity android:name=".recharge" />
+        <activity android:name=".LoadActivity" />
+        <activity android:name=".discoverbotton" />
+        <activity android:name=".login" />
+        <activity android:name=".register" />
+        <activity android:name=".set" />
+        <activity android:name=".personalset" />
+        <activity android:name=".SearchButton" />
+        <activity android:name=".Reservation" />
+        <activity android:name=".Nine" />
+        <activity android:name=".OrderSearchResult1" />
+        <activity android:name=".OrderSearchResult2" />
+        <activity android:name=".OrderSearchResult3" />
+        <activity android:name=".OrderSearchResult4" />
+        <activity android:name=".SubmitOrder" />
+        <activity android:name=".Example1" />
+        <activity android:name=".Example2" />
+        <activity android:name=".OrderSure" />
+        <activity android:name=".Preference1" />
+        <activity android:name=".Preference2" />
+        <activity android:name=".Preference3" />
+        <activity android:name=".Preference4" />
+        <activity
+            android:name=".StartActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- created by Administrator at 2015-06-29 09:18:17 -->
+
+    </application>
+
+</manifest>

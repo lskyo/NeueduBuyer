@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- author:罗星华 -->
+<mapper namespace="com.neuedu.mapper.UserMapper">
+
+	<select id="findAll" resultType="User">
+		select user_account as 'userAccount',user_name as 'userName', password, user_mobile as 'userMobile', user_idcard as 'userIdcard' 
+		,user_credit as 'userCredit', user_balance as 'userBalance' from user
+	</select>
+	
+	<select id="findByUserMobile" parameterType="String" resultType="User">
+		select user_account as 'userAccount',user_name as 'userName', password
+		, user_mobile as 'userMobile', user_idcard as 'userIdcard' 
+		, user_credit as 'userCredit', user_balance as 'userBalance' 
+		from user where user_mobile=#{userMobile}
+	</select>
+	
+	
+	<select id="findByUserName" parameterType="String" resultType="User">
+		select user_account as 'userAccount',user_name as 'userName', password
+		, user_mobile as 'userMobile', user_idcard as 'userIdcard' 
+		, user_credit as 'userCredit', user_balance as 'userBalance' 
+		from user where user_name=#{userName}
+	</select>
+	
+	<select id="findByUserIdcard" parameterType="String" resultType="User">
+		select user_account as 'userAccount',user_name as 'userName', password
+		, user_mobile as 'userMobile', user_idcard as 'userIdcard' 
+		, user_credit as 'userCredit', user_balance as 'userBalance' 
+		from user where user_idcard=#{userIdcard}
+	</select>
+	
+	<select id="findByUserAccount" parameterType="String" resultType="User">
+		select user_account as 'userAccount',user_name as 'userName', password
+		, user_mobile as 'userMobile', user_idcard as 'userIdcard' 
+		, user_credit as 'userCredit', user_balance as 'userBalance' 
+		from user where user_account=#{userAccount}
+	</select>
+
+	
+	<select id="findTotal" resultType="int">
+		select count(user_account) from user
+	</select>
+
+	
+	<select id="findByPager" parameterType="Pager" resultType="User">
+		select user_account as 'userAccount',user_name as 'userName', password
+		, user_mobile as 'userMobile', user_idcard as 'userIdcard' 
+		, user_credit as 'userCredit', user_balance as 'userBalance'  
+		from user limit #{startIndex},#{size}
+	</select>
+	
+	<insert id="add" parameterType="User">
+		insert into user(user_account,user_name,password
+		,user_mobile,user_idcard,user_credit,user_balance) 
+		value(#{userAccount},#{userName},#{password}
+		,#{userMobile},#{userIdcard},#{userCredit}
+		,#{userBalance})
+	</insert>
+	<!-- 未测试 -->
+	<update id="update" parameterType="User">
+		update user set user_name=#{userName},password=#{password}
+		,user_mobile=#{userMobile},user_idcard=#{userIdcard}
+		,user_credit=#{userCredit},user_balance=#{userBalance}  
+		where user_account=#{userAccount}
+	</update>
+	
+	<delete id="deleteByUserAccount" parameterType="String">
+		delete from user where user_account=#{userAccount}
+	</delete>
+	
+</mapper>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/backgroung2" >
+
+       <TextView 
+           android:id="@+id/ordermenu1"
+           android:layout_width="match_parent"
+           android:layout_height="50dp"
+           android:text="已完成订单"
+           android:textSize="30sp"
+           android:gravity="center"/>
+       <View 
+           android:layout_width="match_parent"
+           android:layout_height="10dp"/>
+       <ListView 
+           android:id="@+id/orderList2"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:divider="#ccc"
+           android:dividerHeight="5dp"
+           >
+       </ListView>
+  
+
+</LinearLayout>

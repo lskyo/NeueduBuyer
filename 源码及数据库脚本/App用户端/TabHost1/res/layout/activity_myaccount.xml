@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroung2"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/balance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:gravity="center"
+         android:text="余额:"
+       
+        android:textSize="30dp" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/balanceNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+           android:layout_centerHorizontal="true"
+            android:text="00"
+            android:textSize="80dp" />
+        <TextView
+            android:id="@+id/rmb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_toRightOf="@id/balanceNum"
+          
+            android:text=" 元"
+            android:textSize="80dp" />
+    </RelativeLayout>
+<Button 
+    android:id="@+id/recharge"
+       android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textSize="20dp"
+        android:paddingBottom="3dip"
+        android:paddingLeft="80dip"
+        android:paddingRight="80dip"
+        android:paddingTop="3dip"
+        android:text="去充值 " />
+</LinearLayout>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- Area配置操作接口的名称，注意需要包含package包名 -->
+<mapper namespace="com.neuedu.mapper.AreaMapper">
+    <!-- 使用select对应数据库的查询操作，id配置的是界都的方法名，resultType配置返回数据的类型 -->
+     <select id="findAll" resultType ="Area">
+      select area_id as 'areaId',coding,province,city,district,parent from area
+</select>
+
+<!-- 从参数中获取数据需要使用#{属性名}，这是类EL表达式语法 -->
+ <insert id="add" parameterType="Area">
+		INSERT INTO area  
+		<trim prefix="set" suffixOverrides=",">
+		 <if test="areaId != null">area_id=#{areaId},</if>
+		 <if test="coding != null">coding=#{coding},</if>
+		 <if test="province != null">province=#{province},</if>
+		 <if test="city != null">city=#{city},</if>
+		 <if test="district != null">district=#{district},</if>
+		 <if test="parent != null">parent=#{parent},</if>
+		 </trim>
+</insert>
+
+<!--修改需要加上where条件，否则会修改整表的数据  -->
+<update id="update" parameterType="Area">
+  update area set coding=#{coding},province=#{province},city=#{city},district=#{district},parent=#{parent} where area_id=#{areaId} 
+</update>
+
+<delete id = "deleteByAreaId" parameterType = "int">
+  delete from area where area_id=#{areaId}
+</delete>
+<!--查询配置可以同时有参数和返回结果  -->
+ <select id="findByAreaId" parameterType= "int" resultType="Area">
+ select area_id as 'areaId',coding,province,city,district,parent from area where area_id= #{areaId}
+ </select>
+ <!--查询配置可以同时有参数和返回结果  -->
+<select id="findByCoding" parameterType= "String" resultType="Area">
+ select area_id as 'areaId',coding,province,city,district,parent from area where coding= #{coding}
+ </select>
+ <!--查询配置可以同时有参数和返回结果  -->
+<select id="findProvince" parameterType= "String" resultType="Area">
+ select area_id as 'areaId',coding,province,city,district,parent from area where province= #{province}
+ </select>
+  <!--查询配置可以同时有参数和返回结果  -->
+<select id="findCity" parameterType= "String" resultType="Area">
+ select area_id as 'areaId',coding,province,city,district,parent from area where city= #{city}
+ </select>
+  <!--查询配置可以同时有参数和返回结果  -->
+<select id="findDistrict" parameterType= "String" resultType="Area">
+ select area_id as 'areaId',coding,province,city,district,parent from area where district= #{district}
+ </select>
+ 
+ <select id="findProvinceByCountry" parameterType="String" resultType="Area">
+ 	select area_id as 'areaId',coding,province,city,district,parent from area where parent= #{parent}
+ </select>
+  <select id="findCityByProvince" parameterType="String" resultType="Area">
+ 	select area_id as 'areaId',coding,province,city,district,parent from area where parent= #{parent}
+ 	 </select>
+  <select id="findDistrictByCity" parameterType="String" resultType="Area">
+ 	select area_id as 'areaId',coding,province,city,district,parent from area where parent= #{parent}
+ </select>
+ 
+ <!-- 
+ <select id="findByProvince" parameterType= "String" 
+ select area_id as 'areaId',coding,province,city,district,parent from area where province= #{province}
+ </select>
+ <select id="findByCity" parameterType= "String" resultType="Area">
+ select area_id as 'areaId',coding,province,city,district,parent from area where city= #{city}
+ </select>
+ 
+ <select id="findByDistrict" parameterType= "String" resultType="Area">
+ select area_id as 'areaId',coding,province,city,district,parent from area where ditrict= #{district}
+ </select>
+ 
+  <select id="findByParent" parameterType= "String" resultType="Area">
+ select area_id as 'areaId',coding,province,city,district,parent from area where parent= #{parent}
+ </select>
+  -->
+
+ 
+ 
+	
+
+</mapper>
